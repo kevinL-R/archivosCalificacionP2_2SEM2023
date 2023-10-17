@@ -68,26 +68,20 @@ BEGIN
     DECLARE @valor1 INT DEFAULT 25;
     DECLARE @valor2 INT DEFAULT 30;
 
-    IF (@valor1 + @valor2) % 3 = 0 AND (@valor1 * @valor2) > 400
-    BEGIN
+    IF (@valor1 + @valor2) % 3 = 0 AND (@valor1 * @valor2) > 400 THEN
         PRINT 'La suma es divisible por 3 y el producto es mayor que 400';
-    END
     ELSE
-    BEGIN
         PRINT 'Al menos una de las condiciones no se cumple';
-    END;
+    END IF;
 
     DECLARE @cantidad INT DEFAULT 8;
     DECLARE @precio DOUBLE DEFAULT = 20.25;
 
-    IF @cantidad * @precio >= 160 OR (@cantidad % 2 = 0 AND @precio > 15)
-    BEGIN
+    IF @cantidad * @precio >= 160 OR (@cantidad % 2 = 0 AND @precio > 15) THEN
         PRINT 'El total es mayor o igual a 160 o la cantidad es par y el precio es mayor a 15';
-    END
     ELSE
-    BEGIN
         PRINT 'Al menos una de las condiciones no se cumple';
-    END;
+    END IF;
 
     DECLARE @edad INT DEFAULT 18;
     DECLARE @genero VARCHAR DEFAULT 'M';
@@ -110,12 +104,12 @@ BEGIN
 
     WHILE @contador <= 10
     BEGIN
-        IF @contador % 2 = 0
+        IF @contador % 2 = 0 THEN
         BEGIN
             SET @sumaPares = @sumaPares + @contador;
         END;
 
-        IF @sumaPares > 15
+        IF @sumaPares > 15 THEN
         BEGIN
             PRINT 'La suma de números pares supera 15. Salir del bucle WHILE.';
             BREAK; -- Sale del bucle WHILE
@@ -131,19 +125,19 @@ BEGIN
 
     FOR @i IN 1..9
     BEGIN
-        IF @resultado > 50
+        IF @resultado > 50 THEN
         BEGIN
             PRINT 'El resultado supera 50. Salir del bucle FOR.';
             BREAK; -- Sale del bucle FOR
-        END
+        END;
 
         SET @resultado = @resultado * @i;
 
-        IF @i = 5
+        IF @i = 5 THEN
         BEGIN
             PRINT 'Saltar el cálculo para i = 5.';
             CONTINUE; -- Salta a la siguiente iteración del bucle FOR
-        END
+        END;
 
         PRINT 'Resultado parcial para i = ';
         PRINT @i;

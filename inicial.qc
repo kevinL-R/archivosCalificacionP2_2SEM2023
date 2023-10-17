@@ -51,23 +51,17 @@ BEGIN
     DECLARE @num1 INT DEFAULT 10;
     DECLARE @num2 INT DEFAULT 5;
 
-    IF @num1 + @num2 > 15
-    BEGIN
+    IF @num1 + @num2 > 15 THEN
         PRINT 'La suma es mayor que 15';
-    END
     ELSE
-    BEGIN
         PRINT 'La suma es menor o igual a 15';
-    END;
+    END IF;
 
-    IF @num1 * @num2 < 30 AND @num1 > @num2
-    BEGIN
+    IF @num1 * @num2 < 30 AND @num1 > @num2 THEN
         PRINT 'El producto es menor que 30 y num1 es mayor que num2';
-    END
     ELSE
-    BEGIN
         PRINT 'Al menos una de las condiciones no se cumple';
-    END;
+    END IF;
 
 
     DECLARE @nota INT;
@@ -89,7 +83,7 @@ BEGIN
 
     WHILE @contador <= 10
     BEGIN
-        IF @contador % 2 = 0
+        IF @contador % 2 = 0 THEN
         BEGIN
             SET @suma = @suma + @contador;
         END;
