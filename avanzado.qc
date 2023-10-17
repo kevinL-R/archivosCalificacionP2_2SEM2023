@@ -82,26 +82,20 @@ BEGIN
     DECLARE @valor1 INT DEFAULT 55;
     DECLARE @valor2 INT DEFAULT 30;
 
-    IF (@valor1 * @valor2) % 7 = 0 AND (@valor1 - @valor2) > 10
-    BEGIN
+    IF (@valor1 * @valor2) % 7 = 0 AND (@valor1 - @valor2) > 10 THEN
         PRINT 'El producto es divisible por 7 y la diferencia es mayor que 10';
-    END
     ELSE
-    BEGIN
         PRINT 'Al menos una de las condiciones no se cumple';
-    END;
+    END IF;
 
     DECLARE @cantidad INT DEFAULT 12;
     DECLARE @precio DOUBLE DEFAULT 18.75;
 
-    IF @cantidad * @precio >= 200 OR (@cantidad % 3 = 0 AND @precio >= 15)
-    BEGIN
+    IF @cantidad * @precio >= 200 OR (@cantidad % 3 = 0 AND @precio >= 15) THEN
         PRINT 'El total es mayor o igual a 200 o la cantidad es divisible por 3 y el precio es mayor o igual a 15';
-    END
     ELSE
-    BEGIN
         PRINT 'Al menos una de las condiciones no se cumple';
-    END;
+    END IF;
     DECLARE @edad INT DEFAULT 19;
     DECLARE @puntuacion INT DEFAULT 79;
 
