@@ -75,7 +75,7 @@ BEGIN
     END IF;
 
     DECLARE @cantidad INT DEFAULT 8;
-    DECLARE @precio DOUBLE DEFAULT = 20.25;
+    DECLARE @precio DOUBLE DEFAULT 20.25;
 
     IF @cantidad * @precio >= 160 OR (@cantidad % 2 = 0 AND @precio > 15) THEN
         PRINT 'El total es mayor o igual a 160 o la cantidad es par y el precio es mayor a 15';
