@@ -143,7 +143,7 @@ BEGIN
         PRINT @i;
         PRINT ' es ';
         PRINT @resultado;
-    END
+    END;
 END;
 -- Función 
 CREATE FUNCTION CalcularFactorial() RETURNS INT
