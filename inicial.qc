@@ -1,3 +1,4 @@
+PRINT 'ARCHIVO DE CALIFICACION INICIAL';
 -- Crear tablas
 CREATE TABLE Empleados (
     ID INT,

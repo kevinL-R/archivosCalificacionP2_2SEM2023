@@ -1,3 +1,4 @@
+PRINT 'ARCHIVO DE CALIFICACION AVANZADO';
 -- Crear tablas
 CREATE TABLE Productos (
     ProductoID INT,

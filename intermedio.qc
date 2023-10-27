@@ -1,3 +1,4 @@
+PRINT 'ARCHIVO DE CALIFICACION INTERMEDIO';
 -- Crear tablas 
 CREATE TABLE Clientes (
     ClienteID INT,
